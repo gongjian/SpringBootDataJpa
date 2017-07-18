@@ -77,12 +77,13 @@ public class DataController {
 
 	}
 
-	@RequestMapping("/auto")
+	//定制的模糊查询
+	/*@RequestMapping("/auto")
 	public Page<Person> auto(Person person) {
 
 		Page<Person> people = personRepository.findByAuto(person, null);
 
 		return people;
-	}
+	}*/
 
 }

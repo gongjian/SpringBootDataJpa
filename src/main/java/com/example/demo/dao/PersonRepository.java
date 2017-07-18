@@ -2,13 +2,15 @@ package com.example.demo.dao;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import com.example.demo.domain.Person;
-import com.example.demo.support.CustomRepository;
 
-public interface PersonRepository extends CustomRepository<Person, Long> {
+//集成定制的Repository
+/*public interface PersonRepository extends CustomRepository<Person, Long> {*/
+public interface PersonRepository extends JpaRepository<Person, Long> {
 
 	// 方法名查询
 	List<Person> findByAddress(String address);
